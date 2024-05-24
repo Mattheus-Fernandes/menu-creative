@@ -207,3 +207,53 @@ ul li a {
   width: 50%;
   transform: translateX(-100%);
 }
+
+/*
+
+  MENU BLURRY
+
+*/
+.five {
+  background-color: lightseagreen;
+}
+
+.five ul:hover a {
+  filter: blur(3px);
+}
+
+.five ul a:hover {
+  filter: blur(0);
+}
+
+.five li {
+  transition: 0.5s;
+}
+
+.five a {
+  color: white;
+  display: block;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.five a:hover {
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+.five a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  transition: 0.4s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.five a:hover::before {
+  transform: scale(1);
+}
