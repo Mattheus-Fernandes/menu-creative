@@ -171,3 +171,39 @@ ul li a {
   transition-delay: 0.45s;
 }
 
+/*
+
+  MENU MOVING
+
+*/
+.four a::before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: skyblue; 
+  transition: all 0.7s;
+}
+
+.four a:hover:before{
+  width: 50%;
+  transform: translateX(100%);
+}
+
+.four a::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 0;
+  height: 5px;
+  background-color: pink;
+  transition: all 0.7s;
+}
+
+.four a:hover::after{
+  width: 50%;
+  transform: translateX(-100%);
+}
