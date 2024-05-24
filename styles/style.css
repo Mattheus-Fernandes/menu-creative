@@ -12,20 +12,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.menu.one {
-  background-color: yellow;
-}
-
-.one ul {
+ul {
   display: flex;
   flex-wrap: wrap;
 }
 
-.one ul  li {
+ul  li {
   list-style: none;
 }
 
-.one ul li a {
+ul li a {
   color: black;
   text-decoration: none;
   font-size: 22px;
@@ -33,6 +29,17 @@ body {
   padding: 10px 15px;
   position: relative;
 }
+
+/*
+
+  MENU GROWING
+
+*/
+
+.menu.one {
+  background-color: yellow;
+}
+
 
 .one ul li a::before {
   content: "";
@@ -63,4 +70,52 @@ body {
 .one ul li a:hover::before,
 .one ul li a:hover::after{
   transform: scaleX(1);
+}
+
+
+/*
+
+  MENU BORDERS
+
+*/
+.menu.two {
+  background-color: aqua;
+}
+
+.two a::before {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid black;
+  border-width: 0 0 3px 3px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.two a:hover::before {
+  opacity: 1;
+  bottom: -8px;
+  left: -8px;
+}
+
+.two a::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid black;
+  border-width: 3px 3px 0 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.two a:hover::after {
+  opacity: 1;
+  top: -8px;
+  right: -8px;
 }
