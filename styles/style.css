@@ -257,3 +257,60 @@ ul li a {
 .five a:hover::before {
   transform: scale(1);
 }
+
+
+/*
+
+  MENU BORDERS
+
+*/
+.six {
+  background-color: blue;
+}
+
+.six a {
+  transition: all .5s;
+  color: white;
+  z-index: 1;
+}
+
+.six a:hover {
+  color: blue;
+}
+
+.six a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scaleY(1.5);
+  transition: .5s;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  
+}
+
+.six a:hover::before{
+  transform: scaleY(1.2);
+  opacity: 1;
+}
+
+.six a::after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: .5s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.six a:hover::after {
+  transform: scale(1);
+}
