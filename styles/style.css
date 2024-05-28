@@ -416,3 +416,50 @@ ul li a {
   right: -10px;
   opacity: 1;
 }
+
+
+.eight {
+  height: 50vh;
+  background-color: black;
+}
+
+.eight nav ul {
+  display: block;
+}
+
+.eight nav ul li a {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  font-size: 40px;
+  font-weight: 900;
+  z-index: 1;
+}
+
+
+.eight nav ul li a::before,
+.eight nav ul li a::after {
+  position: absolute;
+  content: attr(data-text);
+  top: 10px;
+  left: 15px;
+  transition: .5s;
+}
+
+.eight nav ul li a:hover::before{
+  color: red;
+  z-index: 1;
+  -webkit-text-stroke: 1px black;
+  transform: translate(7px, -7px);
+}
+
+.eight nav ul li a:hover::after{
+  color: skyblue;
+  z-index: 2;
+  -webkit-text-stroke: 1px black;
+  transform: translate(14px, -14px);
+}
+
+.eight nav ul li a:hover {
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
